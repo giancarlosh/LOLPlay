@@ -1,0 +1,49 @@
+
+    <div class="container-fluid table_">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header prueba"> <%= @rol %> Matches Schedule </h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <!-- <th><%= @user.id %></th> -->
+                  <th>Blue Team</th>
+                  <th>Red Team</th>
+                  <th> Match Date</th>
+                  <th>Validate </th>
+                  <th>Winner</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <% for i in 0..@op.length-1 %>
+                    <tr>
+                      <td><%= i+1 %></td>
+                      <td><%= @op[i][0] %></td>
+                      <td><%= @op[i][1] %></td>
+                      <td><%= @op[i][2] %></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Confirm
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Yes</a></li>
+                            <li><a href="#">No</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                          </ul>
+                        </div>
+
+                      </td>
+                      <td> -----</td>
+                    </tr>
+                  <%end%> 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

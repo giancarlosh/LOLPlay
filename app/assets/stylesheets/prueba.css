@@ -1,0 +1,165 @@
+.table {
+	max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 50px auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+.prueba {
+	color: #f9f9f9
+}
+.if-yes-then-show {
+    display:none;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+.fa{
+    color: #610606;
+}
+.first-row{
+	/*background: #f7f7f7;*/
+	
+	padding-right: 0px;
+	padding-left: 50px;
+	padding-bottom: 100px;
+	margin-top: 300px;
+	/*height: 600px;*/
+   
+    overflow: hidden;
+}
+.second-row{
+	background: #715b41;
+	margin: 0 auto;
+	padding-right: 0px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	height: 600px;
+   
+    overflow: hidden;
+}
+.second-row-description{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+    
+}
+.second_row_img img {
+  width: 100%;
+}
+.col-sm-5{
+	padding-right: 0px;
+}
+.center-img{
+	text-align: center;
+}
+.content{
+	padding-top: 20px;
+}
+.index {
+	color: #f0edd8;
+}
+
+/*menu user*/
+.options-user{
+  background-color: #f7f7f7;
+}
+.options-user a {
+  color: #5a5050;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: bold;
+}
+/*user home*/
+.user-data-father{
+ 
+  
+  margin-right: 60px;
+
+}
+.user-data-son{
+  background-color: #f7f7f7;
+  padding-top: 66.5px;
+  
+  
+}
+.user-header {
+  font-weight: bold;
+}
+.user-home{
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+
+}
+.user-home-son{
+  background-color: #EDEDED;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+/*footer*/
+.footer{
+  background-color: #f7f7f7;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+

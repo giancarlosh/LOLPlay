@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row options-user">
+    <div class="col-sm-2">
+      <a href="/users/show">Home</a>
+    </div>
+    <div class="col-sm-2">
+      <a href="/users/show/calendar">Calendar</a>
+    </div>
+    <div class="col-sm-2">
+      <a href="#">Stadistics</a>
+    </div>
+    <div class="col-sm-2 col-sm-offset-2">
+      <i class="fa fa-commenting" aria-hidden="true"></i>
+      <a href="#">Messages</a>
+    </div>
+    <div class="col-sm-2">
+      <i class="fa fa-exclamation" aria-hidden="true"></i>
+      <a href="#">Notifications</a>
+    </div>
+  </div>
+</div>
+<div  class="container-fluid ">
+  <div class="row about-user user-home">
+    <div class=" col-sm-4 col-sm-offset-2 user-home-son  ">
+      
+      <% if @user.gender == "Male"%>
+        <img src="/assets/avatar-male.png" class="img-responsive img-circle center-block" alt="Responsive image">
+      <% else %>
+        <img src="/assets/avatar-female.png" class="img-responsive img-circle center-block" alt="Responsive image"> 
+      <% end %>
+      <div class="btn center-block" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" >Edit photo</button>
+      </div>
+    </div>
+    <div class="col-sm-5 user-data-father">
+       <div class="row">  
+        <div class="col-sm-2 user-data-son user_data">  
+          <div class="user-header"> Name: </div> 
+          <div class="user-header"> Gender: </div>
+          <div class="user-header"> Rol: </div>
+          <div class="user-header"> Wins: </div>
+          <div class="user-header"> Losses:</div>
+          <div class="user-header"> Points: </div>
+          
+        </div>
+        <div class="col-sm-5 user-data-son">
+          <div class="user-info"> <%= @user.name %> </div>
+          <div class="user-info"> <%= @user.gender %> </div>
+          <div class="user-info"> <%= @user.rol %> </div>
+          <div class="user-info"> <%= @user.score.wins %> </div>
+          <div class="user-info"> <%= @user.score.losses %> </div>
+          <div class="user-info"> <%= @user.score.points %> </div>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-sm-7 user-data-son">
+          <a class="user-header" href="http://www.lolstarz.com/summoner?name=<%= @user.name %>&lo=euw">Extra information</a>  
+        </div>
+        
+      </div>
+    </div> 
+  </div> 
+</div>
+
+      
+
+ 
+
+
+
+
+
+ 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyProject</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+    <body>
+    <header>
+        <div class="wrapper">
+          <div class="logo">
+            <a class="logo-a" href="">Lol<span>Play</span>
+            </a>
+          </div>
+          <button class="dl-trigger"></button>
+        <% if user_signed_in? %>
+          
+          <nav class="menu-user">
+
+            <%= link_to "Home", index_path %>
+            <%= link_to "Profile", show_user_path %>
+            <a href="https://www.twitch.tv/directory/game/League%20of%20Legends"> Streams</a>
+           
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            <%= link_to current_user.name, show_user_path %>
+          
+
+        <% else %>
+          
+          <nav class="menu-user">
+            <%= link_to "Sign Up", new_user_registration_path %>
+            <%= link_to "Log In", new_user_session_path %>
+          </nav>
+         
+        <% end %>
+
+      </div>
+
+     
+    </header>
+    
+    <%= yield %>
+    <div class="container-fluid footer">
+      <div class="col-sm-12">
+        <span> © Copyright 2016 Giako`s effort </span>
+      </div>
+      
+    </div>
+
+    
+  </body>
+</html>
