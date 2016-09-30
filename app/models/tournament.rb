@@ -10,9 +10,9 @@ class Tournament < ApplicationRecord
 		groups = select_players(rol)
 		for i in 0..size-1
 			user1 = groups[i][0]
-			user1_name = User.where(id: user1).first.name
+			user1_name = User.find_by(id: user1).name
 			user2 = groups[i][1]
-			user2_name = User.where(id: user2).first.name
+			user2_name = User.find_by(id: user2).name
 			Match.create(name: "1VS1", user1_id: user1, user1: user1_name,
 				user2_id: user2, user2: user2_name, tournament_id: tournament.id, 
 				date: DateTime.now + (rand * 14))
@@ -27,6 +27,7 @@ class Tournament < ApplicationRecord
 		players_id = User.where(rol: "#{rol}").pluck(:id)
 		groups = RoundRobinTournament.schedule(players_id) 
 		return  groups.reduce(:concat)
+
 	end
 
 	def self.update_matches(user)

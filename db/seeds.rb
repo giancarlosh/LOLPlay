@@ -8,7 +8,7 @@
 summoner_id_def = 40000000
 rols = ["Top", "Mid", "Jungle", "Adc", "Supp"]
 genders = ["Male", "Female"]
-for i in 1..58
+for i in 1..28
 	user = User.create(
         name: FFaker::Name.first_name,
         rol: rols[i%5],

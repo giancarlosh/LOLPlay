@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 			@rol = @user.rol
 			if @user.score == nil
 				@user.score = Score.create(wins: 0,losses: 0, win_ratio: 0.0, points: 0)
-				if User.where(rol: "#{@rol}").count ==12
+				if User.where(rol: "#{@rol}").count ==6
 					Tournament.create_tournaments(@rol)
 					opponents = Match.where("user1_id = #{@user.id}").or(Match.where("user2_id = #{@user.id}"))
 					@op = opponents.pluck(:user1, :user2, :date)
@@ -27,8 +27,5 @@ class UsersController < ApplicationController
 		opponents = Match.where("user1_id = #{@user.id}").or(Match.where("user2_id = #{@user.id}"))
 		@op = opponents.pluck(:user1, :user2, :date)
 	end
-	def profile
-		
-	end
-
+	
 end

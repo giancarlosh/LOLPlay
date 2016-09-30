@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
 
 	def self.update_score(idwinner,idloser)
+		# binding.pry
 		winner_user = User.find_by(id: idwinner)
 		count_result(winner_user,1)
 
@@ -18,15 +19,17 @@ class User < ApplicationRecord
 		count_result(loser_user,0)
 	end
 
-	def count_result(user,i)
+	def self.count_result(user,i)
 		if (i==1)
 			user.score.wins += 1
 			user.score.points +=3
 		else
 			user.score.losses += 1 
 		end
+
 		user.score.win_ratio = user.score.wins/(user.score.wins+user.score.losses)
-		user.save
+		user.score.save
+		# binding.pry
 	end
 
 
